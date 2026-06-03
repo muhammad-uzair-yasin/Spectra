@@ -1,0 +1,33 @@
+{
+  "name": "spectra",
+  "version": "4.0.0",
+  "description": "AI Agent & Workflow System - Use specialized AI agents with Claude, Cursor, or any AI tool",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "workflow",
+    "claude",
+    "cursor",
+    "prompt-engineering"
+  ],
+  "author": {
+    "name": "Velios AI",
+    "email": "devs@veliosai.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veliosai/spectra.git"
+  },
+  "files": [
+    ".spectra",
+    "guide.md",
+    "README.md",
+    "LICENSE"
+  ]
+}

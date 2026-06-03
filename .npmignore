@@ -1,0 +1,51 @@
+# Development files
+.git
+.gitignore
+.github
+.env
+.env.local
+.env.*.local
+
+# Node modules (not needed in npm)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.test/
+test/
+tests/
+coverage/
+
+# Build artifacts
+dist/
+build/
+out/
+
+# CI/CD
+.github/workflows/
+.gitlab-ci.yml
+.circleci/
+
+# Documentation source (only ship compiled docs)
+docs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# This is what npm SHOULD include:
+# .spectra/
+# guide.md
+# README.md
+# LICENSE
+# package.json
