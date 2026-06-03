@@ -21,7 +21,7 @@ Spectra is a system of specialized AI agents and workflow rules. Use it with Cla
 Use triggers to tell the AI what type of work you need. Include the trigger in your request:
 
 ```
-Please act as the workflow and use trigger -l to build a new feature
+-l to build a new feature
 ```
 
 ### All Triggers & Commands
