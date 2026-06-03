@@ -46,6 +46,30 @@ Please act as the workflow and use trigger -l to build a new feature
 | | `-g --simple [branch]` | Push to Branch | Commit → push to specified branch |
 | **`-help`** | `-help` | — | Show all triggers |
 
+
+
+## When to Use Each Trigger
+
+**Planning & Discovery:**
+- `-init` — Starting a new project? Initialize context first
+- `-us` — Defining a new feature? Start with user story
+- `-d` — Need expert advice? Use discussion mode (read-only)
+
+**Building Features:**
+- `-l` — Building a full feature? Use large task (full workflow)
+- `-s` — Small feature or fix? Use small task (faster)
+- `-q` — One-line change? Use quick task
+
+**Code Quality:**
+- `-review` — Review code before merging? Use code review
+- `-ask` — Understand existing code? Read and explain
+- `-fix` — Something broken? Diagnose and fix
+
+**Specialized Work:**
+- `-db` — Schema changes, migrations? Use database engineer
+- `-g` — Commit and push? Use git operations
+- `-update` — Change docs/specs? Update existing files
+
 ### Example Usages
 
 **Step 1: Initialize Workflow (Do this once)**
@@ -135,28 +159,6 @@ Then use any trigger below:
 -update docs/context/preferences.md
 ```
 
-
-## When to Use Each Trigger
-
-**Planning & Discovery:**
-- `-init` — Starting a new project? Initialize context first
-- `-us` — Defining a new feature? Start with user story
-- `-d` — Need expert advice? Use discussion mode (read-only)
-
-**Building Features:**
-- `-l` — Building a full feature? Use large task (full workflow)
-- `-s` — Small feature or fix? Use small task (faster)
-- `-q` — One-line change? Use quick task
-
-**Code Quality:**
-- `-review` — Review code before merging? Use code review
-- `-ask` — Understand existing code? Read and explain
-- `-fix` — Something broken? Diagnose and fix
-
-**Specialized Work:**
-- `-db` — Schema changes, migrations? Use database engineer
-- `-g` — Commit and push? Use git operations
-- `-update` — Change docs/specs? Update existing files
 
 ## Available Agents
 
