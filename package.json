@@ -1,6 +1,6 @@
 {
   "name": "spectra-ai",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "description": "AI Agent & Workflow System - Use specialized AI agents with Claude, Cursor, or any AI tool",
   "main": "index.js",
   "type": "module",
