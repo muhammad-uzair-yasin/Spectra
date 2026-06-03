@@ -37,19 +37,153 @@ Choose the agent that matches your task:
 3. Agents collaborate and provide expert-level solutions
 4. You get comprehensive results with code, architecture, or planning
 
+## Triggers - How to Use Spectra
+
+Use triggers to tell the AI what type of work you need. Include the trigger in your request:
+
+```
+Please act as the workflow and use trigger -l to build a new feature
+```
+
+### All Triggers & Commands
+
+| Trigger | Command | Sub-Version | Use For |
+|---------|---------|-------------|---------|
+| **`-init`** | `-init` | Mode A: Fresh Project | New project, no code/docs → AI asks all questions |
+| | `-init docs/` | Mode B: From Docs | Have existing documentation → AI reads + creates context |
+| | `-init --existing` | Mode C: Auto-Detect | Have code → AI scans + auto-creates context |
+| **`-l`** | `-l [feature name]` | — | Large feature: specify → plan → implement → review |
+| **`-s`** | `-s [task name]` | — | Small task: plan → implement → review |
+| **`-q`** | `-q [change]` | — | Quick change: single file, minimal planning |
+| **`-us`** | `-us [feature]` | — | User story: define with diagrams + acceptance criteria |
+| **`-d`** | `-d [topic]` | — | Discussion: expert advice (read-only) |
+| **`-fix`** | `-fix` | — | Fix error: debug + fix + verify |
+| **`-ask`** | `-ask [question]` | — | Explain code: read + explain flow + flag issues |
+| **`-review`** | `-review` | — | Code review: check quality (read-only) |
+| **`-db`** | `-db [task]` | — | Database: schema + migrations + seeders |
+| **`-update`** | `-update [file]` | — | Update docs: modify existing MD files |
+| **`-g`** | `-g` | Full Workflow | Create branch → commit → push → create PR |
+| | `-g --simple` | Simple Push | Commit → push to current branch (no PR) |
+| | `-g --simple [branch]` | Push to Branch | Commit → push to specified branch |
+| **`-help`** | `-help` | — | Show all triggers |
+
+### Example Usages
+
+**Step 1: Initialize Workflow (Do this once)**
+```
+Please act as the workflow defined in: ./.spectra/rules/workflow_v4.md
+```
+
+Then use any trigger below:
+
+**`-init`**
+```
+-init
+```
+
+**`-init docs/`**
+```
+-init docs/
+```
+
+**`-init --existing`**
+```
+-init --existing
+```
+
+**`-l [feature]`**
+```
+-l build a real-time chat system
+```
+
+**`-s [task]`**
+```
+-s add user profile avatars
+```
+
+**`-q [change]`**
+```
+-q fix the typo in UserModel.ts
+```
+
+**`-us [feature]`**
+```
+-us email notification feature
+```
+
+**`-d [topic]`**
+```
+-d review if this API design is scalable
+```
+
+**`-fix`**
+```
+-fix TypeError at line 42 in payment.service.ts
+```
+
+**`-ask [question]`**
+```
+-ask explain how the authentication flow works
+```
+
+**`-review`**
+```
+-review
+```
+
+**`-db [task]`**
+```
+-db add an orders table with migration
+```
+
+**`-g`**
+```
+-g
+```
+
+**`-g --simple`**
+```
+-g --simple
+```
+
+**`-g --simple [branch]`**
+```
+-g --simple develop
+```
+
+**`-update [file]`**
+```
+-update docs/context/preferences.md
+```
+
+### When to Use Each Trigger
+
+**Planning & Discovery:**
+- `-init` — Starting a new project? Initialize context first
+- `-us` — Defining a new feature? Start with user story
+- `-d` — Need expert advice? Use discussion mode (read-only)
+
+**Building Features:**
+- `-l` — Building a full feature? Use large task (full workflow)
+- `-s` — Small feature or fix? Use small task (faster)
+- `-q` — One-line change? Use quick task
+
+**Code Quality:**
+- `-review` — Review code before merging? Use code review
+- `-ask` — Understand existing code? Read and explain
+- `-fix` — Something broken? Diagnose and fix
+
+**Specialized Work:**
+- `-db` — Schema changes, migrations? Use database engineer
+- `-g` — Commit and push? Use git operations
+- `-update` — Change docs/specs? Update existing files
+
+
 ## Documentation
 
 - **[guide.md](./guide.md)** - Full usage guide with examples
 - **[QUICK_START.md](./QUICK_START.md)** - 5-minute getting started
-- **[.spectra/rules/workflow_v4.md](./.spectra/rules/workflow_v4.md)** - Main workflow rules
-
-## Installation
-
-```bash
-npm install spectra-ai
-```
-
-Then import in your project or use the workflow file with your AI tool.
+- **[.spectra/rules/workflow_v4.md](./.spectra/rules/workflow_v4.md)** - Complete workflow rules & trigger details
 
 ## License
 
