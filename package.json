@@ -1,11 +1,14 @@
 {
   "name": "spectra-ai",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "description": "AI Agent & Workflow System - Use specialized AI agents with Claude, Cursor, or any AI tool",
   "main": "index.js",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "scripts": {
+    "postinstall": "node install.js"
   },
   "keywords": [
     "ai",
@@ -22,12 +25,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/veliosai/spectra.git"
+    "url": "https://github.com/muhammad-uzair-yasin/Spectra.git"
   },
   "files": [
     ".spectra",
     "guide.md",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "install.js",
+    "index.js"
   ]
 }

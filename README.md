@@ -177,6 +177,52 @@ Choose the agent that matches your task:
 
 
 
+## Installation
+
+**Local Installation** (Recommended)
+```bash
+cd /path/to/your/project
+npm install spectra-ai
+```
+
+After installation, the `.spectra` folder will automatically appear in your project root.
+
+**Troubleshooting: Package installs in home node_modules instead of project**
+
+If npm is installing packages globally (in home directory) instead of your project:
+
+1. **Check npm configuration:**
+   ```bash
+   npm config get prefix
+   ```
+
+2. **Reset npm to use local project folder:**
+   ```bash
+   npm config set prefix ~/.npm-global
+   npm config set registry https://registry.npmjs.org/
+   ```
+
+3. **Make sure you're NOT using -g flag:**
+   ```bash
+   npm install spectra-ai    # ✅ Correct (local)
+   npm install -g spectra-ai # ❌ Wrong (global)
+   ```
+
+4. **Verify installation:**
+   ```bash
+   ls -la node_modules/spectra-ai
+   ls -la .spectra
+   ```
+
+Your project structure should look like:
+```
+my-project/
+├── node_modules/
+│   └── spectra-ai/
+├── .spectra/              ← Auto-copied here
+└── package.json
+```
+
 ## Documentation
 
 - **[guide.md](./guide.md)** - Full usage guide with examples
