@@ -2,6 +2,29 @@
 
 Spectra is a system of specialized AI agents and workflow rules. Use it with Claude, Cursor, or any AI tool to get expert-level help on any software engineering task.
 
+## The Problem Spectra Solves
+
+When you hit message limits or token limits on Claude, Cursor, or Copilot, you switch to another AI tool (Gemini CLI, Copilot, Antigravity, etc.). But the new tool doesn't know what happened before — it loses all context about your project.
+
+If the previous AI completed only half a task, the next AI starts from zero and doesn't know:
+- What you're building
+- What decisions were made
+- What code patterns you use
+- What task was being worked on
+- What's already done and what's left
+
+So you waste time re-explaining everything, or the new AI breaks your code because it doesn't understand your project.
+
+**Spectra's Solution:**
+
+Spectra automatically saves everything in a `docs/` folder in your project:
+- **Project overview** — what you're building, your tech stack
+- **Progress** — what's done, what's being worked on, what's next
+- **Decisions** — code patterns, conventions, rules you follow
+- **Preferences** — your style, file sizes, naming rules
+
+When you switch to a different AI tool, it reads the `docs/` folder first and knows exactly where the last AI left off. You can switch from Claude → Cursor → Copilot → Gemini CLI without losing context.
+
 ## Quick Start
 
 1. **Install via npm:**
